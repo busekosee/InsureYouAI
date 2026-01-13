@@ -5,9 +5,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InsureYouAI.Controllers
 {
-    public class AboutItemItemController(InsureContext context) : Controller
+    public class AboutItemController : Controller
     {
-        private readonly InsureContext _context = context;
+        private readonly InsureContext _context;
+
+        public AboutItemController(InsureContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult AboutItemList()
         {
